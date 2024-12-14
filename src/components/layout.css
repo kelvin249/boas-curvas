@@ -42,6 +42,7 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  background-color: black;
 }
 a {
   background-color: transparent;
@@ -221,4 +222,8 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: none;
+}
+footer {
+  display: flex;
+  justify-content: center;
 }

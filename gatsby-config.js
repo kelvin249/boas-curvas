@@ -1,20 +1,20 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
 
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Boas Curvas`,
+    description: `Just some images of some bikes, honest.`,
+    author: `mcdog`,
+    siteUrl: `https://example.com`,
+    DEV_SSR: true,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-heap',
+      options: {
+        appId: '2359043452',
+        enableOnDevMode: true // if 'false', heap will be fired on NODE_ENV=production only
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -25,6 +25,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
